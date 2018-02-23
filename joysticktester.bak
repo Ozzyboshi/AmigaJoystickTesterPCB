@@ -1,0 +1,406 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:joysticktester-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Amiga joystick tester"
+Date "2018-02-22"
+Rev "1"
+Comp "Alessio Garzi"
+Comment1 "Simple db9 joystick tester for Amiga and C64GS computers"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L USB_OTG J1
+U 1 1 5A8BE68E
+P 1650 1750
+F 0 "J1" H 1450 2200 50  0000 L CNN
+F 1 "USB_OTG" H 1450 2100 50  0000 L CNN
+F 2 "Connectors:USB_Micro-B" H 1800 1700 50  0001 C CNN
+F 3 "" H 1800 1700 50  0001 C CNN
+	1    1650 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L DB9_Male J2
+U 1 1 5A8BE726
+P 5400 1800
+F 0 "J2" H 5400 2350 50  0000 C CNN
+F 1 "DB9_Male" H 5400 1225 50  0000 C CNN
+F 2 "" H 5400 1800 50  0001 C CNN
+F 3 "" H 5400 1800 50  0001 C CNN
+	1    5400 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R8
+U 1 1 5A8BE9A0
+P 5550 5900
+F 0 "R8" V 5630 5900 50  0000 C CNN
+F 1 "R" V 5550 5900 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P20.32mm_Horizontal" V 5480 5900 50  0001 C CNN
+F 3 "" H 5550 5900 50  0001 C CNN
+	1    5550 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D8
+U 1 1 5A8BEA2A
+P 6000 5900
+F 0 "D8" H 6000 6000 50  0000 C CNN
+F 1 "LED" H 6000 5800 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 6000 5900 50  0001 C CNN
+F 3 "" H 6000 5900 50  0001 C CNN
+	1    6000 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D1
+U 1 1 5A8C1285
+P 6000 3800
+F 0 "D1" H 6000 3900 50  0000 C CNN
+F 1 "LED" H 6000 3700 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 6000 3800 50  0001 C CNN
+F 3 "" H 6000 3800 50  0001 C CNN
+	1    6000 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R1
+U 1 1 5A8C1312
+P 5550 3800
+F 0 "R1" V 5630 3800 50  0000 C CNN
+F 1 "R" V 5550 3800 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P20.32mm_Horizontal" V 5480 3800 50  0001 C CNN
+F 3 "" H 5550 3800 50  0001 C CNN
+	1    5550 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5850 3800 5700 3800
+$Comp
+L LED D2
+U 1 1 5A8C1860
+P 6000 4100
+F 0 "D2" H 6000 4200 50  0000 C CNN
+F 1 "LED" H 6000 4000 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 6000 4100 50  0001 C CNN
+F 3 "" H 6000 4100 50  0001 C CNN
+	1    6000 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R2
+U 1 1 5A8C189D
+P 5550 4100
+F 0 "R2" V 5630 4100 50  0000 C CNN
+F 1 "R" V 5550 4100 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P20.32mm_Horizontal" V 5480 4100 50  0001 C CNN
+F 3 "" H 5550 4100 50  0001 C CNN
+	1    5550 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5700 4100 5850 4100
+Wire Wire Line
+	5600 2100 5600 2250
+Text Label 6450 5900 0    60   ~ 0
+GROUND
+Wire Wire Line
+	5200 4100 5400 4100
+Wire Wire Line
+	5800 2100 6300 2100
+Text Label 6300 2100 0    60   ~ 0
+UP
+Wire Wire Line
+	5600 2250 6300 2250
+Text Label 6300 2250 0    60   ~ 0
+DOWN
+Wire Wire Line
+	5400 2100 5400 2400
+Wire Wire Line
+	5400 2400 6300 2400
+Text Label 6300 2400 0    60   ~ 0
+LEFT
+Wire Wire Line
+	5200 2100 5200 2550
+Wire Wire Line
+	5200 2550 4400 2550
+Text Label 4400 2550 2    60   ~ 0
+RIGHT
+Wire Wire Line
+	5100 2100 5100 2400
+Wire Wire Line
+	5100 2400 4400 2400
+Text Label 4400 2400 2    60   ~ 0
+BUTTON1
+Wire Wire Line
+	5700 2100 5700 2550
+Wire Wire Line
+	5700 2550 6300 2550
+Text Label 6300 2550 0    60   ~ 0
+BUTTON2
+$Comp
+L R R3
+U 1 1 5A8C31EA
+P 5550 4400
+F 0 "R3" V 5630 4400 50  0000 C CNN
+F 1 "R" V 5550 4400 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P20.32mm_Horizontal" V 5480 4400 50  0001 C CNN
+F 3 "" H 5550 4400 50  0001 C CNN
+	1    5550 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L R R4
+U 1 1 5A8C3219
+P 5550 4700
+F 0 "R4" V 5630 4700 50  0000 C CNN
+F 1 "R" V 5550 4700 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P20.32mm_Horizontal" V 5480 4700 50  0001 C CNN
+F 3 "" H 5550 4700 50  0001 C CNN
+	1    5550 4700
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D3
+U 1 1 5A8C3255
+P 6000 4400
+F 0 "D3" H 6000 4500 50  0000 C CNN
+F 1 "LED" H 6000 4300 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 6000 4400 50  0001 C CNN
+F 3 "" H 6000 4400 50  0001 C CNN
+	1    6000 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D4
+U 1 1 5A8C32A2
+P 6000 4700
+F 0 "D4" H 6000 4800 50  0000 C CNN
+F 1 "LED" H 6000 4600 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 6000 4700 50  0001 C CNN
+F 3 "" H 6000 4700 50  0001 C CNN
+	1    6000 4700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 4400 6450 4400
+Wire Wire Line
+	6150 4700 6450 4700
+Text Label 6450 4400 0    60   ~ 0
+LEFT
+Text Label 6450 4700 0    60   ~ 0
+RIGHT
+Wire Wire Line
+	6150 4100 6450 4100
+Wire Wire Line
+	6150 3800 6450 3800
+Text Label 6450 4100 0    60   ~ 0
+DOWN
+Text Label 6450 3800 0    60   ~ 0
+UP
+Wire Wire Line
+	5850 4400 5700 4400
+Wire Wire Line
+	5400 4400 5200 4400
+Wire Wire Line
+	5400 4700 5200 4700
+Wire Wire Line
+	5700 4700 5850 4700
+Text Label 5200 4400 2    60   ~ 0
+GROUND
+Text Label 5200 4700 2    60   ~ 0
+GROUND
+Text Label 5200 4100 2    60   ~ 0
+GROUND
+Wire Wire Line
+	5400 3800 5200 3800
+Text Label 5200 3800 2    60   ~ 0
+GROUND
+$Comp
+L R R5
+U 1 1 5A8D736E
+P 5550 5000
+F 0 "R5" V 5630 5000 50  0000 C CNN
+F 1 "R" V 5550 5000 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P20.32mm_Horizontal" V 5480 5000 50  0001 C CNN
+F 3 "" H 5550 5000 50  0001 C CNN
+	1    5550 5000
+	0    1    1    0   
+$EndComp
+$Comp
+L R R6
+U 1 1 5A8D76B5
+P 5550 5300
+F 0 "R6" V 5630 5300 50  0000 C CNN
+F 1 "R" V 5550 5300 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P20.32mm_Horizontal" V 5480 5300 50  0001 C CNN
+F 3 "" H 5550 5300 50  0001 C CNN
+	1    5550 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D5
+U 1 1 5A8D76FB
+P 6000 5000
+F 0 "D5" H 6000 5100 50  0000 C CNN
+F 1 "LED" H 6000 4900 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 6000 5000 50  0001 C CNN
+F 3 "" H 6000 5000 50  0001 C CNN
+	1    6000 5000
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED D6
+U 1 1 5A8D7742
+P 6000 5300
+F 0 "D6" H 6000 5400 50  0000 C CNN
+F 1 "LED" H 6000 5200 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 6000 5300 50  0001 C CNN
+F 3 "" H 6000 5300 50  0001 C CNN
+	1    6000 5300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 5000 5200 5000
+Wire Wire Line
+	5400 5300 5200 5300
+Wire Wire Line
+	5700 5000 5850 5000
+Wire Wire Line
+	5700 5300 5850 5300
+Wire Wire Line
+	6150 5000 6450 5000
+Wire Wire Line
+	6150 5300 6450 5300
+Text Label 5200 5000 2    60   ~ 0
+GROUND
+Text Label 5200 5300 2    60   ~ 0
+GROUND
+Wire Wire Line
+	5000 2100 5000 2200
+Wire Wire Line
+	5000 2200 4400 2200
+Text Label 4400 2200 2    60   ~ 0
+BUTTON3
+Text Label 6450 5000 0    60   ~ 0
+BUTTON1
+Text Label 6450 5300 0    60   ~ 0
+BUTTON2
+NoConn ~ 1950 1750
+NoConn ~ 1950 1850
+Text Label 1950 1950 0    60   ~ 0
+GROUND
+Text Label 1650 2150 0    60   ~ 0
+GROUND
+Text Label 1950 1550 0    60   ~ 0
+VCC
+NoConn ~ 1550 2150
+$Comp
+L PWR_FLAG #FLG01
+U 1 1 5A8E78FF
+P 1950 1000
+F 0 "#FLG01" H 1950 1075 50  0001 C CNN
+F 1 "PWR_FLAG" H 1950 1150 50  0000 C CNN
+F 2 "" H 1950 1000 50  0001 C CNN
+F 3 "" H 1950 1000 50  0001 C CNN
+	1    1950 1000
+	1    0    0    -1  
+$EndComp
+Text Label 1950 1000 3    60   ~ 0
+VCC
+$Comp
+L PWR_FLAG #FLG02
+U 1 1 5A8E7AD1
+P 1350 1000
+F 0 "#FLG02" H 1350 1075 50  0001 C CNN
+F 1 "PWR_FLAG" H 1350 1150 50  0000 C CNN
+F 2 "" H 1350 1000 50  0001 C CNN
+F 3 "" H 1350 1000 50  0001 C CNN
+	1    1350 1000
+	1    0    0    -1  
+$EndComp
+Text Label 1350 1000 3    60   ~ 0
+GROUND
+$Comp
+L R R7
+U 1 1 5A8E7E57
+P 5550 5600
+F 0 "R7" V 5630 5600 50  0000 C CNN
+F 1 "R" V 5550 5600 50  0000 C CNN
+F 2 "Resistors_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P20.32mm_Horizontal" V 5480 5600 50  0001 C CNN
+F 3 "" H 5550 5600 50  0001 C CNN
+	1    5550 5600
+	0    1    1    0   
+$EndComp
+$Comp
+L LED D7
+U 1 1 5A8E7EA0
+P 6000 5600
+F 0 "D7" H 6000 5700 50  0000 C CNN
+F 1 "LED" H 6000 5500 50  0000 C CNN
+F 2 "LEDs:LED_D3.0mm" H 6000 5600 50  0001 C CNN
+F 3 "" H 6000 5600 50  0001 C CNN
+	1    6000 5600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 5600 5200 5600
+Wire Wire Line
+	5700 5600 5850 5600
+Wire Wire Line
+	6150 5600 6450 5600
+Text Label 5200 5600 2    60   ~ 0
+GROUND
+Text Label 6450 5600 0    60   ~ 0
+BUTTON3
+Text Label 5300 2100 3    60   ~ 0
+GROUND
+Wire Wire Line
+	5400 5900 5200 5900
+Wire Wire Line
+	5700 5900 5850 5900
+Wire Wire Line
+	6150 5900 6450 5900
+Text Label 5200 5900 2    60   ~ 0
+VCC
+Text Label 5500 2100 3    60   ~ 0
+VCC
+$EndSCHEMATC
