@@ -1,4 +1,4 @@
-update=gio 22 feb 2018 14:43:42 CET
+update=sab 24 feb 2018 23:13:29 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=../../../kicadfiles/Connectors_DSub.pretty
+LibDir=../../../kicadfiles/Connectors_DSub.pretty;../../../kicadfiles
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -61,3 +61,4 @@ LibName29=opto
 LibName30=atmel
 LibName31=contrib
 LibName32=valves
+LibName33=/home/ozzy/kicadfiles/w_connectors

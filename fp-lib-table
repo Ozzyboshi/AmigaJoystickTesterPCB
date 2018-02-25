@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name Connectors_DSub)(type KiCad)(uri /home/ozzy/kicadfiles/Connectors_DSub.pretty)(options "")(descr ""))
+  (lib (name w_conn_d-sub)(type Legacy)(uri /home/ozzy/kicadfiles/w_conn_d-sub.mod)(options "")(descr ""))
 )
